@@ -1,11 +1,11 @@
-import random
+from random import choice
 from hangman_wordlist import word_list
 from art import logo, stages
 
 # Initial setup
 lives = 6
 print(logo)
-chosen_word = random.choice(word_list)
+chosen_word = choice(word_list)
 display = []
 word_length = len(chosen_word)
 
@@ -25,11 +25,11 @@ while True:
             display[position] = letter
 
     if guess not in chosen_word:
-        print(f"Your guess was \'{guess}\', that's not in the word. You lose a life.")
         lives = lives - 1
         if lives == 0:
             print("You lost!")
             break
+        print(f"Your guess was \'{guess}\', that's not in the word. You lose a life.")
 
     print(display)
 
