@@ -17,7 +17,7 @@ while True:
     guess = input("Enter a letter: ").lower()
 
     if guess in display:
-        print(f"You've already guessed '{guess}'")
+        print("You've already guessed '{}'".format(guess))
 
     for position in range(word_length):
         letter = chosen_word[position]
@@ -29,7 +29,7 @@ while True:
         if lives == 0:
             print("You lost!")
             break
-        print(f"Your guess was '{guess}', that's not in the word. You lose a life.")
+        print("Your guess was '{}', that's not in the word. You lose a life.".format(guess))
 
     print(display)
 
