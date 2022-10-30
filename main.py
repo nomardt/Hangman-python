@@ -6,7 +6,7 @@ from art import logo, stages
 lives = 6
 print(logo)
 chosen_word = choice(word_list)
-display = []
+display: list[str] = []
 word_length = len(chosen_word)
 
 for _ in range(word_length):
